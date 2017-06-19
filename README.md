@@ -19,6 +19,8 @@ Android Support Repository | r47 (23.4.0)
 Android Support Constraint Library | 1.0.2
 Android Gradle Plugin | 2.2.2
 
+Please note that lint is not working at the moment! This is not my fault but a problem with debian's android packages.
+
 ## Recommended Gradle Configuration
 
 ### Buildscript
@@ -54,9 +56,14 @@ android {
   defaultConfig {
     targetSdkVersion 23
   }
+  
+  lintOptions {
+    abortOnError false
+  }
 }
 
 dependencies {
+  // don't change those versions:
   compile 'com.android.support:appcompat-v7:23.4.0'
   compile 'com.android.support:support-v4:23.4.0'
   compile 'com.android.support:design:23.4.0'
